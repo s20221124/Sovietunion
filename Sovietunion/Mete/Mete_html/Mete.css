@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+h1 {
+    background-color: #8B0000;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-left: 5px solid #8B0000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #8B0000;
+}
+
+h3 {
+    color: #444;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.back-btn-container {
+    text-align: center;
+    margin: 2em 0 1em 0;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 0.8em 2em;
+    background: linear-gradient(90deg, #b22222 40%, #a94442 100%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 2px 8px rgba(178, 34, 34, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-btn:hover {
+    background: linear-gradient(90deg, #a94442 40%, #8b0000 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 12px rgba(178, 34, 34, 0.25);
+    cursor: pointer;
+}
+
+/* Navigationsleiste (Container) */
+.navbar {
+  position: sticky;
+  top: 0;                      /* Oben anheften (sticky) */
+  z-index: 1000;               /* Im Zweifelsfall über anderen Inhalten anzeigen */
+  background-color: #121212;   /* Sehr dunkler Hintergrund */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);  /* Sanfter Schatten unten */
+}
+
+/* Navigation als horizontale Liste */
+.navbar-nav {
+  list-style: none;            /* Aufzählungszeichen entfernen */
+  margin: 0;
+  padding: 0;
+  display: flex;               /* Flexbox für horizontale Anordnung */
+  justify-content: center;     /* Links zentrieren (horizontal) */
+  align-items: center;         /* Vertikal zentriert (in der Leiste) */
+}
+
+/* Listenpunkte etwas auseinanderziehen */
+.navbar-nav li {
+  margin: 0 10px;
+}
+
+/* Stil der Linkelemente */
+.navbar-nav a {
+  display: block;
+  text-decoration: none;       /* Unterstreichung initial entfernen */
+  color: #d8dee9;              /* Hellgraue/graublaue Schrift (hoher Kontrast auf dunkel) */
+  padding: 10px 15px;          /* Innenabstand für größere Klickfläche */
+  border-radius: 5px;          /* Leicht abgerundete Ecken für modernen Look */
+  border-bottom: 2px solid transparent; /* Transparenter unterer Rahmen für Hover-Effekt */
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+  /* Übergänge: sanftes Animieren von Textfarbe, Rahmenfarbe und Hintergrund */
+}
+
+/* Hover- und Fokus-Effekte für Links */
+.navbar-nav a:hover,
+.navbar-nav a:focus {
+  color: #ffffff;             /* Text wird beim Hover strahlend weiß */
+  background-color: #1e1e1e;  /* Dunkelgrauer Hintergrund-Hervorhebung beim Hover */
+  border-color: #ffffff;      /* Unterstreichung (Rahmen unten) in Weiß einblenden */
+  /* Dank transition geschieht die Farbänderung gleitend, nicht abrupt */
+}
+
+/* Responsives Design: Bei schmalen Bildschirmen Menü untereinander anordnen */
+@media (max-width: 600px) {
+  .navbar-nav {
+    flex-direction: column;   /* Links untereinander statt nebeneinander */
+    align-items: center;      /* zentriert ausrichten (horizontal in der Spalte) */
+  }
+  .navbar-nav li {
+    margin: 5px 0;            /* Vertikaler Abstand zwischen Links */
+  }
+}
+
+
+
+
+.stalin-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-left: 5px solid #8B0000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stalin-container .text {
+    flex: 2;
+}
+
+.stalin-container .image {
+    flex: 1;
+}
+
+#stalin_Bild {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+
+
+.text-und-bild {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.text-links {
+    flex: 3;
+}
+
+.bild-rechts {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rundes-bild {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #8B0000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-right: 600px;
+    margin-top: 140px;
+    cursor:pointer;
+}
+
+.trennlinie {
+    height: 40px; /* Abstand zwischen den Gruppen */
+}
+
+#Video{
+  margin-left: 600px;
+}
+
+#Schülerin_Bild{
+  margin-top: 70px;  
+  width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    cursor:pointer;
+    margin-right: 450px;  
+}
